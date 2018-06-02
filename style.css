@@ -77,7 +77,7 @@ nav li a {
     text-decoration: none;
 }
 
-li a:hover {
+nav li a:hover {
     background-color: #2e2e97;
 }
 
