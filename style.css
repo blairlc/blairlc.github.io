@@ -1,10 +1,11 @@
 /* Formatting Resets */
-* { margin:0; padding:0; box-sizing:border-box; }
+
+* {margin: 0; padding: 0;}
 
 h1 {
     text-align: center;
-    display: block;
-    font-size: 2em;
+    display:    block;
+    font-size:  2em;
     margin-top: 0.67em;
     margin-bottom: 0.67em;
     margin-left: 0;
@@ -13,8 +14,8 @@ h1 {
 }
 
 h2 {
-    display: block;
-    font-size: 1.5em;
+    display:    block;
+    font-size:  1.5em;
     margin-top: 0.83em;
     margin-bottom: 0.83em;
     margin-left: 0;
@@ -23,8 +24,8 @@ h2 {
 }
 
 h3 {
-    display: block;
-    font-size: 1.17em;
+    display:    block;
+    font-size:  1.17em;
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 0;
@@ -33,60 +34,109 @@ h3 {
 }
 
 p {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
+    display:        block;
+    margin-top:     1em;
+    margin-bottom:  1em;
+    margin-left:    0;
+    margin-right:   0;
 }
 
 ul {
-    display: block;
+    display:        block;
     list-style-type: disc;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 40px;
+    margin-top:     1em;
+    margin-bottom:  1em;
+    margin-left:    0;
+    margin-right:   0;
+    padding-left:   40px;
 }
 
-/* Custom Formatting */
-body {
-    font-family: sans-serif;
-}
+/* content width, placement, color */
 
 .textcontent {
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-bottom: 16px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 816px;
+    padding-left:   8px;
+    padding-right:  8px;
+    padding-top:    2.5em; /* moves content below nav bar */
+    padding-bottom: 8px;
+    margin-left:    auto;
+    margin-right:   auto;
+    max-width:      800px;
 }
 
-nav li {
-    float:left;
-    border-right: 1px solid #bbb;
+.textcontenttop {
+    padding-left:   8px;
+    padding-right:  8px;
+    padding-top:    8px; 
+    padding-bottom: 8px;
+    margin-left:    auto;
+    margin-right:   auto;
+    max-width:      800px;
 }
 
-nav li a {
-    display: block;
-    color: white;
+.video-box {
+    position: relative;
+    width:    100%;
+    height:   0;
+    padding-top: 56.2%; /* aspect ratio */ }
+
+.video {
+    position: absolute;
+    top:      0;
+    left:     0;
+    bottom:   0;
+    right:    0;
+    width:    100%;
+    height:   100%;
+}
+
+body {
+    color:      #000a21;
+    font-family: 'open-sans-bold', AvenirNext-Medium, sans-serif;
+    font-size:  16px;
+    background: #ecfaff;
+}
+
+/* Navigation Settings */
+nav {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    margin-top: -2.5em; /* moves nav bar just above the fold */
+    top:       0;
+	width:     100%;
+	background: #082159;
     text-align: center;
-    padding: 1em 1em;
-    text-decoration: none;
+    z-index:    1;
 }
 
-nav li a:hover {
-    background-color: #2e2e97;
+.anchor a { /* for moving content below nav bar */
+    position: absolute;
+    left:     0px;
+    top:      -5em;
+}
+
+.anchor {
+  position: relative;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #000080;
-    top: 0;
-    width: 100%;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    padding-left: 0px;
+}
+
+nav li {
+	display: inline-block;
+	padding: .67em 10px;
+}
+
+nav li a {
+	color: #fff;
+	text-transform: uppercase;
+    text-decoration: none;
+    font-size:  1.17em;
+}
+
+/* Screens Settings */
+#screen1 {
+    min-height: 100vh;
 }
